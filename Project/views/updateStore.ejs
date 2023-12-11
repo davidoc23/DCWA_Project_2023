@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Store</title>
+</head>
+<body>
+    <h1>Update Store</h1>
+    <form action="/stores/update/<%= store.sid %>" method="POST">
+        <label for="sid">Store ID</label>
+        <input type="text" id="sid" name="sid" value="<%= store.sid %>" readonly>
+        <br>
+        <label for="newLocation">New Location:</label>
+        <input type="text" id="newLocation" name="newLocation" required>
+        <br>
+        <label for="newmgrid">New Manager ID:</label>
+        <input type="text" id="newmgrid" name="newmgrid" required>
+        <br>
+        <button type="submit">Update Store</button>
+    </form>
+    
+</body>
+</html>

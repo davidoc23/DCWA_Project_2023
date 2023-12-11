@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Store</title>
+</head>
+<body>
+    <h1>Add Store</h1>
+
+    <form action="/stores/add" method="post">
+        <label for="sid">Store ID</label>
+        <input type="text" id="sid" name="sid">
+        <br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <br>
+
+        <label for="mgrid">Manager ID:</label>
+        <input type="text" id="mgrid" name="mgrid" required>
+        <br>
+
+        <button type="submit">Add Store</button>
+    </form>
+    <a href="/">Home</a>
+    <a href="/stores">Back to Stores</a>
+</body>
+</html>

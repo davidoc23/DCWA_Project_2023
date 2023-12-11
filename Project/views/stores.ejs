@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stores Page</title>
+</head>
+<body>
+    <h1>Stores Page</h1>
+    <a href="/stores/add">Add Store</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Store ID</th>
+                <th>Location</th>
+                <th>Manager ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% stores.forEach(store => { %>
+                <tr>
+                    <td><%= store.sid %></td>
+                    <td><%= store.location %></td>
+                    <td><%= store.mgrid %></td>
+                    <td>
+                        <a href="/stores/update/<%= store.sid %>">Update</a>
+                        <!-- Use a form for the "Delete Store" action -->
+                        <form action="/stores/delete/<%= store.sid %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this store?');">
+                            <button type="submit">Delete Store</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
